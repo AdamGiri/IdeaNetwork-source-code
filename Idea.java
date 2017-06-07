@@ -29,6 +29,7 @@ public class Idea extends LinearLayout implements View.OnLongClickListener{
     ClipData.Item item;
     ViewHolder viewHolder;
     private static final String IDEA_TAG = "idea";
+    Context mContext;
 
 
     //inner class ViewHolder to define idea tag
@@ -49,7 +50,7 @@ public class Idea extends LinearLayout implements View.OnLongClickListener{
         view = inflater.inflate(R.layout.idea_layout,this,true);
         view.setOnLongClickListener(this);
         setIdeaTags();
-        setDragNewIdea();
+        this.mContext = context;
 
 
     }
@@ -73,10 +74,7 @@ public class Idea extends LinearLayout implements View.OnLongClickListener{
 
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.HONEYCOMB)
-    private void setDragNewIdea() {
 
-    }
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -90,6 +88,8 @@ public class Idea extends LinearLayout implements View.OnLongClickListener{
                     MIMETYPE_TEXT_PLAIN},item);
             DragShadowBuilder myShadow = new DragShadowBuilder(view);
             view.startDragAndDrop(dragData,myShadow,null,0);
+
+
         }
 
         return false;
