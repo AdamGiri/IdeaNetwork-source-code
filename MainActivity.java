@@ -30,6 +30,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.parse.ParseAnalytics;
@@ -47,24 +48,34 @@ public class MainActivity extends AppCompatActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+/*BIDIRECTIONAL SCROLLVIEW*/
+        ScrollView sv = new ScrollView(this);
+        HScroll hsv = new HScroll(this);
+        hsv.sv = sv;
+        /*END OF BIDIRECTIONAL SCROLLVIEW*/
+
+        final RelativeLayout rl = new RelativeLayout(this);
+        rl.setBackgroundColor(0xFF0000FF);
+        sv.addView(rl, new RelativeLayout.LayoutParams(10000,10000));
+        hsv.addView(sv, new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT));
+        setContentView(hsv);
         ParseAnalytics.trackAppOpenedInBackground(getIntent());
 
+
         Idea idea = new Idea(this,null);
-        final LinearLayout linearLayout = (LinearLayout)findViewById(R.id.LinearLayout);
-        final RelativeLayout relativeLayout = (RelativeLayout)findViewById(R.id.RelativeLayout);
-        linearLayout.addView(idea);
-        relativeLayout.setOnDragListener(new View.OnDragListener() {
+        //final LinearLayout linearLayout = (LinearLayout)findViewById(R.id.LinearLayout);
+       // final RelativeLayout relativeLayout = (RelativeLayout)findViewById(R.id.RelativeLayout);
+        rl.addView(idea);
+        rl.setOnDragListener(new View.OnDragListener() {
             @Override
             public boolean onDrag(View v, DragEvent event) {
                 final int action = event.getAction();
                 Log.i("test","red");
                 switch(action){
                     case DragEvent.ACTION_DROP:
-
                         Idea idea = new Idea(getApplicationContext(),null);
-
-                        relativeLayout.addView(idea,generateParams(event,idea));
+                        rl.addView(idea,generateParams(event,idea));
                 }
                 return true;
 
@@ -75,8 +86,7 @@ public class MainActivity extends AppCompatActivity  {
 
     @RequiresApi(api = Build.VERSION_CODES.HONEYCOMB)
     private RelativeLayout.LayoutParams generateParams(DragEvent event,  Idea idea) {
-        RelativeLayout.LayoutParams params = new RelativeLayout.
-                LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT);
         //TODO becareful here if you change the dimensions of the Idea the mouse positioning will be off
         //TODO therefore, review these calculations upon dimension change

@@ -6,10 +6,12 @@ import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.HorizontalScrollView;
+import android.widget.ScrollView;
 
 
 public class HScroll extends HorizontalScrollView {
 
+    public ScrollView sv;
 
     public HScroll(Context context) {
         super(context);
@@ -28,13 +30,14 @@ public class HScroll extends HorizontalScrollView {
         super(context, attrs, defStyleAttr, defStyleRes);
     }
 
-    @Override
-    public boolean onTouchEvent(MotionEvent ev) {
-        return super.onTouchEvent(ev);
-    }
 
     @Override
-    public void setOverScrollMode(int mode) {
-        super.setOverScrollMode(mode);
+    public boolean onTouchEvent(MotionEvent ev) {
+        boolean ret = super.onTouchEvent(ev);
+        ret = ret | sv.onTouchEvent(ev);
+        return ret;
     }
+
+
+
 }
