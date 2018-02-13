@@ -1,4 +1,4 @@
-package com.parse.starter;
+package com.parse.ideanetwork;
 
 import android.content.Context;
 import android.os.Build;

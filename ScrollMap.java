@@ -1,8 +1,6 @@
-package com.parse.starter;
+package com.parse.ideanetwork;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.support.annotation.Px;
 import android.util.Log;
 import android.view.MotionEvent;

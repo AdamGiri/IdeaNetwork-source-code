@@ -6,14 +6,13 @@
  * LICENSE file in the root directory of this source tree. An additional grant
  * of patent rights can be found in the PATENTS file in the same directory.
  */
-package com.parse.starter;
+package com.parse.ideanetwork;
 
 import android.app.Application;
 
+import com.google.android.gms.ads.MobileAds;
 import com.parse.Parse;
 import com.parse.ParseACL;
-import com.parse.ParseException;
-import com.parse.ParseObject;
 import com.parse.ParseUser;
 
 
@@ -23,6 +22,8 @@ public class StarterApplication extends Application {
   public void onCreate() {
     super.onCreate();
 
+    MobileAds.initialize(this,
+            "ca-app-pub-3940256099942544~3347511713");
     // Enable Local Datastore.
     Parse.enableLocalDatastore(this);
 
@@ -34,10 +35,14 @@ public class StarterApplication extends Application {
             .build());
 
 
+
     ParseUser.enableAutomaticUser();
     ParseACL defaultACL = new ParseACL();
     // Optionally enable public read access.
-    // defaultACL.setPublicReadAccess(true);
+    defaultACL.setPublicReadAccess(true);
+    defaultACL.setPublicWriteAccess(true);
     ParseACL.setDefaultACL(defaultACL, true);
+
+
   }
 }
