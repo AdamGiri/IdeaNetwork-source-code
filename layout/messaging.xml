@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/constraintParent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/grey"
+    android:clipToPadding="false"
+    android:paddingBottom="2dp">
+
+
+ <TextView
+     android:id="@+id/textView28"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_marginBottom="1dp"
+     android:layout_marginEnd="2dp"
+     android:layout_marginLeft="2dp"
+     android:layout_marginRight="2dp"
+     android:layout_marginStart="2dp"
+     android:background="@color/teallight"
+     android:elevation="2dp"
+     android:paddingBottom="5dp"
+     android:paddingEnd="10dp"
+     android:paddingLeft="10dp"
+     android:paddingRight="10dp"
+     android:paddingStart="20dp"
+     android:paddingTop="5dp"
+     android:text="Chat"
+     android:textColor="@color/white"
+     android:textSize="18sp"
+     android:textStyle="bold"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintLeft_toLeftOf="parent"
+     app:layout_constraintRight_toRightOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+     app:layout_constraintVertical_bias="0.008" />
+
+ <EditText
+     android:id="@+id/editText4"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginEnd="8dp"
+     android:layout_marginLeft="8dp"
+     android:layout_marginRight="8dp"
+     android:layout_marginStart="8dp"
+     android:layout_marginTop="8dp"
+     android:ems="10"
+     android:inputType="textPersonName"
+     android:text="Name"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintHorizontal_bias="0.607"
+     app:layout_constraintLeft_toLeftOf="parent"
+     app:layout_constraintRight_toRightOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+     app:layout_constraintVertical_bias="0.35" />
+
+ <ImageView
+     android:id="@+id/imageView14"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginBottom="8dp"
+     android:layout_marginLeft="8dp"
+     android:layout_marginRight="8dp"
+     android:layout_marginTop="8dp"
+     android:elevation="6dp"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintHorizontal_bias="0.988"
+     app:layout_constraintLeft_toLeftOf="parent"
+     app:layout_constraintRight_toRightOf="@+id/textView28"
+     app:layout_constraintTop_toTopOf="parent"
+     app:layout_constraintVertical_bias="0.0"
+     app:srcCompat="@drawable/ic_chat_title" />
+
+ <ListView
+     android:id="@+id/commentsSection"
+     android:layout_width="match_parent"
+     android:layout_height="350dp"
+     android:layout_marginBottom="2dp"
+     android:layout_marginEnd="2dp"
+     android:layout_marginLeft="2dp"
+     android:layout_marginRight="2dp"
+     android:layout_marginStart="2dp"
+     android:layout_marginTop="45dp"
+     android:background="@android:color/background_light"
+     android:focusableInTouchMode="true"
+     android:paddingEnd="1dp"
+     android:paddingLeft="1dp"
+     android:paddingRight="1dp"
+     android:paddingStart="1dp"
+     android:paddingTop="1dp"
+     app:layout_constraintBottom_toBottomOf="parent"
+     app:layout_constraintHorizontal_bias="1.0"
+     app:layout_constraintLeft_toLeftOf="parent"
+     app:layout_constraintRight_toRightOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+     app:layout_constraintVertical_bias="0.135">
+
+ </ListView>
+
+
+</android.support.constraint.ConstraintLayout>

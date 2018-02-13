@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+
+        android:id="@+id/focusNode"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/circle"
+        android:visibility="visible"
+     >
+
+
+
+</LinearLayout>

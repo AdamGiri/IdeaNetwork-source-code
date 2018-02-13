@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.parse.ideanetwork.ProfileReadOnlyActivity">
+
+    <ListView
+        android:id="@+id/skillsListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/container"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="40dp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/nameRO"
+        android:layout_width="196dp"
+        android:layout_height="wrap_content"
+        android:background="@color/teal100"
+        android:elevation="3dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:textSize="12sp"
+        android:layout_above="@+id/ageRO"
+        android:layout_alignRight="@+id/skillsListView"
+        android:layout_alignEnd="@+id/skillsListView" />
+
+    <ImageView
+        android:id="@+id/profilePicRO"
+        android:layout_width="120dp"
+        android:layout_height="155dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ic_user_profile_teal"
+        android:elevation="4dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/skillsListView"
+        android:layout_alignStart="@+id/skillsListView" />
+
+
+    <TextView
+        android:id="@+id/jobRO"
+        android:layout_width="196dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/profilePicRO"
+        android:layout_alignLeft="@+id/ageRO"
+        android:layout_alignStart="@+id/ageRO"
+        android:layout_marginTop="5dp"
+        android:background="@color/teal100"
+        android:elevation="3dp"
+        android:ems="10"
+        android:hint="Profession"
+        android:inputType="textPersonName"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/ageRO"
+        android:layout_width="196dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/jobRO"
+        android:layout_alignLeft="@+id/nameRO"
+        android:layout_alignStart="@+id/nameRO"
+        android:layout_marginTop="5dp"
+        android:background="@color/teal100"
+        android:elevation="3dp"
+        android:ems="10"
+        android:hint="Age"
+        android:inputType="textPersonName"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:textSize="12sp" />
+
+
+
+
+
+
+
+    <Button
+        android:id="@+id/chatRO"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_speech_bubble"
+        android:onClick="onClickChatRO"
+        android:layout_alignTop="@+id/profilePicRO"
+        android:layout_alignLeft="@+id/nameRO"
+        android:layout_alignStart="@+id/nameRO" />
+
+
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="315dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:background="@color/teallight"
+        android:elevation="13dp"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:layout_below="@+id/profilePicRO"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <TextView
+            android:id="@+id/friends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_marginRight="10dp"
+            android:layout_row="0"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:onClick="friendsOnClick"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="Friends"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <TextView
+            android:id="@+id/bio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginRight="10dp"
+            android:layout_row="0"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:onClick="bioOnClick"
+            android:paddingBottom="5dp"
+
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="5dp"
+            android:text="Bio"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <TextView
+            android:id="@+id/contactTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_column="0"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_row="0"
+            android:layout_weight="1"
+            android:background="@color/activatedTeal"
+
+            android:gravity="center_horizontal"
+            android:onClick="contactDetailsOnClick"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="Contact Details"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <TextView
+            android:id="@+id/skillsInterests"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="3"
+            android:layout_row="0"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="skillsInterestsOnClick"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="Skills"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="0dp" />
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/relativeLayout2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/teal200" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IM"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_alignBottom="@+id/chatRO"
+        android:layout_toRightOf="@+id/chatRO"
+        android:layout_toEndOf="@+id/chatRO" />
+
+
+</RelativeLayout>

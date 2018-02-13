@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.parse.ideanetwork.SearchResultsActivity">
+
+
+    <Spinner
+        android:id="@+id/filterOptions"
+        android:layout_width="100dp"
+        android:layout_height="24dp"
+        android:layout_alignTop="@+id/searchView"
+        android:layout_alignRight="@+id/searchView"
+        android:layout_alignEnd="@+id/searchView" />
+
+    <TextView
+        android:id="@+id/noIdeasMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:text="No mindmaps are available."
+        android:visibility="invisible" />
+
+    <GridView
+        android:id="@+id/searchResultsGridView"
+        android:layout_width="match_parent"
+        android:layout_height="470dp"
+        android:columnWidth="145dp"
+        android:gravity="center"
+        android:horizontalSpacing="10dp"
+        android:numColumns="auto_fit"
+        android:paddingEnd="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingStart="5dp"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+       />
+
+
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="1dp"
+    android:layout_marginBottom="1dp"
+    android:layout_marginEnd="1dp"
+    android:layout_marginLeft="1dp"
+    android:layout_marginRight="1dp"
+    android:layout_marginStart="1dp"
+    android:layout_marginTop="1dp"
+    android:background="@color/grey"
+    android:clipToPadding="false"
+    android:paddingBottom="10dp"
+    android:paddingEnd="2dp"
+    android:paddingLeft="2dp"
+    android:paddingRight="2dp"
+    android:paddingStart="2dp"
+    android:paddingTop="2dp">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/ic_content"
+        android:elevation="7dp" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/teallight"
+        android:elevation="6dp"
+        android:paddingLeft="8dp"
+        android:paddingTop="5dp"
+        android:text="Description"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="5dp"
+        android:layout_below="@id/textView12"
+        android:layout_marginTop="2dp"
+        android:background="@color/white"
+        android:text="No description available." />
+
+</RelativeLayout>

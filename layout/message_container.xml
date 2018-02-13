@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <GridLayout
+
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:horizontalSpacing="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_gravity="fill"
+            android:layout_row="0"
+            android:paddingBottom="3dp"
+            android:paddingEnd="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingStart="5dp"
+            android:paddingTop="3dp"
+            android:text="username"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textColorLink="@android:color/background_light" />
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_row="1"
+            android:gravity="top|left"
+            android:paddingBottom="3dp"
+            android:paddingEnd="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingStart="5dp"
+            android:paddingTop="3dp"
+            android:text="your messages"
+            android:textStyle="italic" />
+
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/reply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:layout_columnWeight="0.5"
+        android:layout_gravity="fill"
+        android:layout_row="0"
+        android:gravity="top|right"
+        android:onClick="onClickReply"
+        android:paddingBottom="3dp"
+        android:paddingEnd="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="3dp"
+        android:text="Reply"
+        android:textColor="@android:color/holo_blue_dark"
+        tools:layout_editor_absoluteX="150dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+</android.support.constraint.ConstraintLayout>
